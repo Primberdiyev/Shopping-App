@@ -25,7 +25,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(
-          top: 123,
+          top: 63,
           left: 23,
           right: 23,
         ),

@@ -14,4 +14,5 @@ class AppTexts {
   static const String firstName = 'FirstName';
   static const String lastName = 'LastName';
   static const String enterEmailAddress = 'Enter Email Address';
+  static const String users = 'users';
 }
