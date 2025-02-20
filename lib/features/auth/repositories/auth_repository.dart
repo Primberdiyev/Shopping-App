@@ -1,9 +1,11 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shopping_app/features/auth/models/user_model.dart';
 import 'package:shopping_app/features/utils/app_texts.dart';
 
-class AuthMethods {
+class AuthRepository {
   Future<void> signUp(UserModel userModel) async {
     try {
       final data = await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -19,6 +21,8 @@ class AuthMethods {
             userModel.toJson(),
             SetOptions(merge: true),
           );
-    } catch (e) {}
+    } catch (e) {
+      log('error on sign up $e');
+    }
   }
 }
