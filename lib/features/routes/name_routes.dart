@@ -4,4 +4,5 @@ class NameRoutes {
   static const signInPassword = '/signInPassword';
   static const signUp = '/signUp';
   static const forgotPassword = 'forgotPassword';
+  static const home = '/home';
 }

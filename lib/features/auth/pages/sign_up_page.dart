@@ -6,7 +6,7 @@ import 'package:shopping_app/features/auth/bloc/authentication_bloc.dart';
 import 'package:shopping_app/features/auth/models/user_model.dart';
 import 'package:shopping_app/features/auth/widgets/auth_back_button.dart';
 import 'package:shopping_app/features/auth/widgets/question_text.dart';
-import 'package:shopping_app/features/home/pages/home_page.dart';
+import 'package:shopping_app/features/routes/name_routes.dart';
 import 'package:shopping_app/features/utils/app_colors.dart';
 import 'package:shopping_app/features/utils/app_text_styles.dart';
 import 'package:shopping_app/features/utils/app_texts.dart';
@@ -29,14 +29,12 @@ class _SignUpPageState extends State<SignUpPage> {
     return BlocConsumer<AuthenticationBloc, AuthenticationState>(
       listener: (context, state) {
         if (state is AuthenticationSuccess) {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (_) => const HomePage()),
-          );
+          Navigator.pushReplacementNamed(context, NameRoutes.home);
         } else if (state is AuthenticationFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text(state.errorMessage)),
           );
+          return;
         }
       },
       builder: (context, state) {

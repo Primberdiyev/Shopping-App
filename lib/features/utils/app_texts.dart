@@ -15,4 +15,7 @@ class AppTexts {
   static const String lastName = 'LastName';
   static const String enterEmailAddress = 'Enter Email Address';
   static const String users = 'users';
+  static const String errorUser = 'User not found';
+  static const String invalidEmail = 'Invalid email, please use a valid email';
+  static const String errorMessageSignUp = 'Error on sign up, please try again';
 }

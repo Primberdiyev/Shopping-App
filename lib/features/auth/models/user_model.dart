@@ -25,7 +25,7 @@ class UserModel {
 
   Map<String, dynamic> toJson() {
     return {
-      if (firstName != null) 'firstName': (firstName != null),
+      if (firstName != null) 'firstName': firstName,
       if (lastName != null) 'lastName': lastName,
       if (email != null) 'email': email,
       if (password != null) 'password': password,
